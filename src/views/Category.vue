@@ -1,6 +1,7 @@
 <template>
   <div>
     分类
+    <Nav />
   </div>
 </template>
 

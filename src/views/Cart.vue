@@ -1,5 +1,6 @@
 <template>
- <div>购物车</div>
+ <div>购物车
+   <Nav /></div>
 </template>
 
 <script>

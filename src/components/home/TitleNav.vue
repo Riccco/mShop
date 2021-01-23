@@ -1,13 +1,13 @@
 <template>
 <div>
-  我的
-  <Nav />
+  我是一个title导航栏
 </div>
 </template>
 
 <script>
+import Navtitle from '@/components/home/TitleNav.vue'
 export default {
-name: "User"
+name: "TitleNav"
 }
 </script>
 

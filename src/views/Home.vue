@@ -1,17 +1,31 @@
 <template>
   <div class="home">
-      商城首页
-    <Nav />
+    <!-- title组件-->
+    <title-nav />
+    <!-- 导航栏  -->
+    <Nav/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import {Component, Vue} from 'vue-property-decorator';
+import TitleNav from '@/components/home/TitleNav.vue';
 
 @Component({
-  components: {
 
-  },
+  // 局部引入组件的方法
+  components:{
+    TitleNav
+  }
 })
-export default class Home extends Vue {}
+
+export default class Home extends Vue{
+
+}
+
 </script>
+
+<style lang="scss">
+
+
+</style>
