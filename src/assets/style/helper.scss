@@ -1,0 +1,31 @@
+// 重置页面样式 保持不同浏览器的显示均衡
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul, ol{
+  list-style: none;
+}
+button, input{
+  font: inherit;
+}
+:focus{
+  outline: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+
+// 手机页面使用 vw单位代替 rem & rpx
+// 100% = 100vw
+// 1% = 1vw
+// vw 为百分比单位 换算方法为 (长度 / 设计稿长度) * 100%
+
+@function rpx2vw($rpx){
+// 以常用750的设计稿为主
+  @return $rpx * 100vw / 750
+}

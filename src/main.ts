@@ -6,6 +6,11 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+//全局导航栏
+import Nav from '@/components/Nav.vue'
+Vue.component('Nav',Nav)
+
+
 new Vue({
   router,
   store,
