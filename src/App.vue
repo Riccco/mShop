@@ -6,6 +6,5 @@
 </template>
 
 <style lang="scss">
-
 @import "~@/assets/style/helper.scss";
 </style>
