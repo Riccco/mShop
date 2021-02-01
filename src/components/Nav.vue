@@ -21,9 +21,8 @@ export default class Nav extends Vue{
     {type:'home',name:'首页',path:'/',images:''},
     {type:'caregory',name:'分类',path:'/category',images:''},
     {type:'cart',name:'购物车',path:'/cart',images:''},
-    {type:'User',name:'我的',path:'/user',images:''}
-
-    ]
+    {type:'User',name:'我的',path:'/user',images:''},
+  ]
 
 //  绑定宽度
   widthNav = {
@@ -43,12 +42,9 @@ export default class Nav extends Vue{
 <style lang="scss" scoped>
 @import "~@/assets/style/helper.scss";
 /*
-
 CSS结构说明：
-
-
 */
-//$nav-num:4;
+
     .nav{
       display: flex;
       flex-direction: row;

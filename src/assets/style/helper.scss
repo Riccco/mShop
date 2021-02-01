@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6{
 // 1% = 1vw
 // vw 为百分比单位 换算方法为 (长度 / 设计稿长度) * 100%
 
-@function rpx2vw($rpx){
+@function rpx2vw($px){
 // 以常用750的设计稿为主
-  @return $rpx * 100vw / 750
+  @return $px * 100vw / 750
 }
