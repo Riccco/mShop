@@ -40,18 +40,16 @@ export default class Nav extends Vue{
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/style/helper.scss";
-/*
-CSS结构说明：
-*/
-
+@import "~@/assets/style/preload.scss";
+$text-color:#999;
     .nav{
       display: flex;
       flex-direction: row;
+      color: $text-color;
+      font-size: px2vw(28);
       .Item{
         display:flex;
         justify-content: center;
-        color: red;
       }
     }
 </style>
