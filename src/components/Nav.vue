@@ -46,7 +46,7 @@ $text-color:#999;
       display: flex;
       flex-direction: row;
       color: $text-color;
-      font-size: px2vw(28);
+      font-size: px2vw(32);
       .Item{
         display:flex;
         justify-content: center;
