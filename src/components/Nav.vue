@@ -1,28 +1,46 @@
 <template>
   <div class="nav">
-    <router-link class="Item"
-                 :style="widthNav"
-                 v-for="(items,index) in x"
-                 :key="index"
-                 :to="items.path">{{items.name}}
-    </router-link>
+    <div class="nav-wrp"
+         :style="widthNav"
+         v-for="(items,index) in x.navdata"
+         :key="index"
+    >
+      <router-link exact-active-class="active-router" class="Item"
+      :to="items.path">
+        <icon class="icon" :name="items.images"></icon>
+        <div>
+          {{items.name}}
+        </div>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 
 import {Component,Vue} from "vue-property-decorator";
-@Component
+@Component({
+
+})
 
 export default class Nav extends Vue{
 // 直接声明 data
 // x 接收全部的导航数据，目前是模拟数据
-  x = [
-    {type:'home',name:'首页',path:'/',images:''},
-    {type:'caregory',name:'分类',path:'/category',images:''},
-    {type:'cart',name:'购物车',path:'/cart',images:''},
-    {type:'User',name:'我的',path:'/user',images:''},
+  icon = [
+    'home',
+    'classification',
+    'shoppingcart',
+    'PersonalCenter'
   ]
+  x = {
+    totalSwitch:true,
+    navdata:[
+      {type:'home',name:'首页',path:'/',images:'home'},
+      {type:'caregory',name:'分类',path:'/category',images:'classification'},
+      {type:'cart',name:'购物车',path:'/cart',images:'shoppingcart'},
+      {type:'User',name:'我的',path:'/user',images:'PersonalCenter'},
+    ]
+  }
 
 //  绑定宽度
   widthNav = {
@@ -31,7 +49,7 @@ export default class Nav extends Vue{
 
 //  计算属性为 getter
   get WidthNav(){
-    return 100 / this.x.length
+    return 100 / this.x.navdata.length
   }
 
 
@@ -39,17 +57,26 @@ export default class Nav extends Vue{
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~@/assets/style/preload.scss";
 $text-color:#999;
-    .nav{
+.active-router{
+  color: red;
+}
+    .icon{
+      width: px2vw(48);
+      height: px2vw(48);
+      margin-bottom: px2vw(8);
+    }
+    .nav-wrp{
       display: flex;
-      flex-direction: row;
       color: $text-color;
-      font-size: px2vw(32);
-      .Item{
-        display:flex;
-        justify-content: center;
-      }
+      font-size: px2vw(22);
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav{
+      padding: px2vw(8) 0;
+      display: flex;
     }
 </style>
