@@ -1,6 +1,6 @@
 <template>
-  <div>
-    分类
+  <div class="cate-wrp">
+    <div class="cate-gory">2</div>
     <Nav />
   </div>
 </template>
@@ -11,6 +11,15 @@ name: "classification"
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+  .cate-wrp{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .cate-gory{
+    flex: 1;
+    overflow: hidden;
+    background: antiquewhite;
+  }
 </style>

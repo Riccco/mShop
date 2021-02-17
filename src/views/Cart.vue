@@ -1,5 +1,5 @@
 <template>
- <div>购物车
+ <div>购物车1
    <Nav /></div>
 </template>
 
